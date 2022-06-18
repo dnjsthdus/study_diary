@@ -1,8 +1,6 @@
 name: 공부 일지 만들기
 
-on:
-  schedule:
-    - cron:  '31 * * * *'
+on: workflow_dispatch
 
 jobs:
   make-study-diary:
