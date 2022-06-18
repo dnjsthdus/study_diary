@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ github.run_id }}-${{ github.run_attempt }}
           release_name: 공부 일지
           body: |
             ${{ steps.run_main.outputs.diary }}
