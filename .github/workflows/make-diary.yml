@@ -21,4 +21,5 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: 공부 일지
-          body: ${{ steps.run_main.outputs.diary }}
+          body: |
+            ${{ steps.run_main.outputs.diary }}
