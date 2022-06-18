@@ -1,0 +1,12 @@
+name: 공부 일지 만들기
+
+on:
+  workflow_dispatch:
+
+jobs:
+  make-study-diary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello, world!"
