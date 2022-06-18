@@ -12,7 +12,7 @@ jobs:
     
       - name: Run main.py
         id: run_main
-        run: echo "::set-output name=diary::$(python main.py)"
+        run: python main.py > output.txt
 
       - name: Create Release
         uses: actions/create-release@v1
@@ -21,5 +21,4 @@ jobs:
         with:
           tag_name: ${{ github.run_id }}-${{ github.run_attempt }}
           release_name: 공부 일지
-          body: |
-            ${{ steps.run_main.outputs.diary }}
+          body_path: output.txt
